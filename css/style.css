@@ -11,7 +11,7 @@ body {
 .container {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 a {
@@ -169,14 +169,14 @@ button:hover {
 
 .servises__content {
     display: flex;
-    /* justify-content: space-between;  */
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-bottom: 96px;
 }
 .service__box {
     background-color: #fff;
-    width: 30%;
-    margin-bottom: 30px;
+    width: 370px;
+    margin-bottom: 20px;
 }
 .service__icon {
     padding-top: 58px;
@@ -210,7 +210,6 @@ button:hover {
     border: 2px solid #000000;
     padding: 20px 15px;
     font-size: 20px;
-    line-height: 22px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -218,10 +217,6 @@ button:hover {
 .service__btn {
     text-align: center;
     padding-bottom: 50px;
-}
-
-.space__box {
-    margin: 0 30px 30px;
 }
 
 .service__box:hover {
@@ -261,7 +256,6 @@ button:hover {
 .buttons button{
     background-color: transparent;
     font-size: 20px;
-    line-height: 22px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -271,3 +265,231 @@ button:hover {
     color: #fff;
 }
 
+.works__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.works__box {
+    margin-bottom: 20px;
+}
+
+.works__btn {
+    text-align: center;
+    margin-top: 109px;
+    padding-bottom: 136px;
+}
+
+.works__btn button {
+    background-color: #00897b;
+    color: #fff;
+    padding: 28px 63px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Pricing Plan */
+
+.pricing {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.pricing__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 125px;
+}
+
+.pricing__item {
+    background-color: #fff;
+}
+.pricing__item:hover {
+    box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+.pricing__item_title {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 1.25px;
+    font-weight: 400;
+    padding: 48px 90px;
+    background-image: url(../images/pricing-bg.png);
+    height: 209px;
+    width: 370px;
+     /* width: 370px;
+    height: 209px;
+    background-color: #3949ab; */
+}
+.pricing__item-price {
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    padding-top: 39px;  
+    font-weight: 300;
+    font-size: 17px;
+}
+.price {
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+.dollar {
+    align-self: start;
+    font-size: 25px;
+    font-weight: 400;
+    vertical-align: top;
+}
+.pricing-options {
+    list-style-type: none;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.pricing-options li {
+    padding: 37px 37px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 0 84px;
+    letter-spacing: 0.85px;
+    font-size: 17px;
+}
+.pricing__btn button{
+    padding: 23px 25px;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid #000000;
+}
+.pricing__btn {
+    text-align: center;
+    margin-top: 65px;
+    padding-bottom: 63px;
+}
+.pricing__btn button:hover {
+    background-color: #00897b;
+    color: #fff;
+}
+
+/* TEAM */
+
+.team__content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 265px;
+}
+
+.team-member_title {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 38px;
+}
+.team-member_text {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 12px;
+}
+.team-member_icons .fab,
+.team-member_icons .fas{
+    color: #00897b;
+    background-color: #f0f1f1;
+    border-radius: 10px;
+}
+.team-member_icons .fab:hover,
+.team-member_icons .fas:hover{
+    color: #ffffff;
+    background-color: #3949ab;
+    cursor: pointer;
+}
+.team-member_icons {
+    text-align: center;
+    margin-top: 30px;
+}
+.team-member_icons i {
+    margin: 0 11px;
+}
+.team-member_icons .fa-facebook-f {
+    padding: 12px 15px 13px;
+}
+.team-member_icons .fa-twitter {
+    padding: 12px 12px 16px;
+}
+.team-member_icons .fa-comments {
+    padding: 13px 9px 12px 11px;
+}
+.team-member_icons .fa-basketball-ball {
+    padding: 12px 10px;
+}
+
+/* BLOG */
+
+.blog {
+    background-color: #e4fdf9;
+}
+
+
+.blog__box {
+    display: flex;
+    
+}
+
+.blog__box-theme {
+    padding-top: 60px;
+    margin-left: 30px;
+}
+.blog__box_title {
+    color: #00897b;
+    font-size: 25px;
+}
+.blog__box-info {
+    display: flex;
+    margin-top: 28px;
+    font-size: 17px;
+}
+
+.blog__box-info i {
+    margin-right: 13px;
+}
+.date {
+    margin-right: 40px;
+    
+}
+
+.blog__box_text {
+    font-size: 15px;
+    max-width: 445px;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    margin-top: 28px;
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left .blog__box-theme {
+    margin-left: 0;
+    margin-right: 155px;
+}
+
+.blog__btn {
+    text-align: center;
+    padding: 125px 0;
+}
+
+.blog__btn button{
+    padding: 28px 52px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    color: #fff;
+    background-color: #00897b;
+    letter-spacing: 1px;
+}
