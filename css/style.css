@@ -11,7 +11,7 @@ body {
 .container {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 12px;
 }
 
 a {
@@ -19,40 +19,92 @@ a {
     text-decoration: none;
     display: inline-block;
 }
+
 button:hover {
     cursor: pointer;
 }
 
+.title {
+    font-size: 30px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 36px;
+    padding-top: 125px;
+    font-weight: 400;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    text-align: center;
+    max-width: 622px;
+    margin: 0 auto;
+    padding-bottom: 125px;
+}
+
 /* Menu*/
 
+.header {
+    /* position: fixed; */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    background-color: #fff;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    background-color: #fff;
+    z-index: 2;
+}
+
 .header__content {
+    position: relative;
+    /* z-index: 2; */
     display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
 }
 
 .header__logo {
     color: #212121;
     font-size: 25px;
     font-weight: 700;
-    line-height: 22px;
-    margin: 50px 344px 49px 0;
+    position: relative;
+    z-index: 3;
+}
+
+.header__burger {
+    display: none;
 }
 
 .menu__list {
     display: flex;
-    margin: 53px 0 50px 0;
+    position: relative;
+    z-index: 2;
+}
+.menu__list li {
+    margin-left: 40px;
+    list-style: none;
 }
 
-.menu__list li {
-    list-style-type: none;
-    margin-right: 40px;
+.menu__link {
     font-size: 20px;
 }
 
-.search__btn {
-    margin: 53px 0;
-}
-
-/* Top */
+ 
+/* TOP */
 
 .top {
     color: #fff;
@@ -68,22 +120,22 @@ button:hover {
 }
 .top__title {
     text-align: center;
-    font-size: 60px;
+    font-size: 55px;
     line-height: 22px;
     letter-spacing: 3px;
     padding-top: 193px;
     margin-bottom: 45px;
+    font-weight: 400;
 }
 .top__text {
     font-size: 22px;
-    line-height: 22px;
     letter-spacing: 1.1px;
     text-align: center;
     margin-bottom: 134px;
 }
 .top__buttons {
-    padding-left: 179px;
-    margin-bottom: 90px;
+    text-align: center;
+    padding: 0 0 90px 0;
 }
 .top__buttons button{
     font-family: 'Roboto', sans-serif;
@@ -93,12 +145,15 @@ button:hover {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
+    border: 2px solid #f8f8f8;
+    outline: none;
 }
 .top__buttons button:first-child {
     margin-right: 20px;
 }
 .top__buttons button:hover {
     background-color: #00897b;
+    border: 2px solid #00897b;
 }
 
 .down__btn {
@@ -109,27 +164,8 @@ button:hover {
     color: #fff;
 }
 
-/* About us */
-.title {
-    font-size: 30px;
-    line-height: 22px;
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 36px;
-    padding-top: 125px;
-}
+/* ABOUT US */
 
-.text {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0.75px;
-    text-align: center;
-    max-width: 622px;
-    margin: 0 auto;
-    padding-bottom: 125px;
-}
 .about__options {
     display: flex;
     justify-content: space-between;
@@ -144,24 +180,32 @@ button:hover {
 .option2 {
     margin: 0 40px;
 }
-
-.option__icon {
-    text-align: center;
+img.option__icon {
+    display: block;
+    margin: 0 auto;
     padding-bottom: 40px;
 }
+
 .option__titile {
     text-align: center;
     font-size: 20px;
-    line-height: 22px;
+    font-weight: 400;
     letter-spacing: 1px;
     padding-bottom: 20px;
 }
 .option__text {
     text-align: center;
     max-width: 268px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.75px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 125px;
 }
 
-/* Services */
+/* SERVICES */
 
 .services {
     background-color: #e4fdf9;
@@ -178,24 +222,22 @@ button:hover {
     width: 370px;
     margin-bottom: 20px;
 }
-.service__icon {
-    padding-top: 58px;
-    margin-bottom: 38px;
-}
 
-.icon {
+.service__icon{
     background-image: url(../images/service-icon.png);
     display: block;
     width: 56px;
     height: 62px;
-    
+    margin-bottom: 38px;
+    display: block;
+    margin: 58px auto 38px;
 }
 
-.service__titile {
+.service__title {
     text-align: center;
     font-size: 20px;
-    line-height: 22px;
     letter-spacing: 1px;
+    font-weight: 400;
 }
 .service__text {
     text-align: center;
@@ -203,12 +245,11 @@ button:hover {
     line-height: 25px;
     letter-spacing: 0.75px;
     margin: 26px 39px 45px;
-    flex-wrap: wrap;
 }
 .service__btn button{
     background-color: transparent;
     border: 2px solid #000000;
-    padding: 20px 15px;
+    padding: 14px 12px;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -216,7 +257,7 @@ button:hover {
 
 .service__btn {
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 49px;
 }
 
 .service__box:hover {
@@ -230,27 +271,21 @@ button:hover {
     border: 2px solid #fff;
 }
 
-.service__icon .icon {
-    margin: 0 auto;
-}
-
-.service__box:hover .service__icon .icon {
+.service__box:hover .service__icon {
     background-image: url(../images/service-wicon.png);
 }
 
 /* WORKS */
 
-.works {
-}
-
 .works__buttons {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-bottom: 119px;
 }
 
 .works__buttons button{
     border: 2px solid #00897b;
-    padding: 20px 30px;
+    padding: 14px 30px;
     margin-right: 15px;
 }
 .buttons button{
@@ -271,8 +306,19 @@ button:hover {
     justify-content: space-between;
     
 }
-.works__box {
-    margin-bottom: 20px;
+.package,
+.watch,
+.shirt {
+    margin-bottom: 16px;
+}
+.package,
+.watch,
+.shirt,
+.bottle,
+.wine,
+.bag {
+    margin-right: 7px;
+    margin-left: 7px;
 }
 
 .works__btn {
@@ -284,14 +330,304 @@ button:hover {
 .works__btn button {
     background-color: #00897b;
     color: #fff;
-    padding: 28px 63px;
+    padding: 22px 61px;
     font-family: 'Roboto';
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* Pricing Plan */
+/* ЭФФЕКТ ЗАТЕМНЕНИЯ ПРИ НАВЕДЕНИИ В БЛОКЕ WORKS */
+/* 1. Watch */
+.watch { 
+    display: block; 
+    position: relative; 
+}
+.watch:after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0; 
+}
+.watch::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: url(../images/img-1.png); 
+    opacity: 0; 
+}
+.watch:hover:before,
+.watch:hover:after { 
+    opacity: 1;
+    cursor: pointer; 
+}
+.watch__text {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 34%;
+    font-size: 20px;
+    color: #fff;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.watch__text span {
+    font-size: 15px;
+}
+.watch:hover .watch__text {
+    display: block;
+}
+/* 2. Package */
+.package { 
+    display: block; 
+    position: relative; 
+}
+.package:after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0; 
+}
+.package::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: url(../images/img-2.png); 
+    opacity: 0; 
+}
+.package:hover:before,
+.package:hover:after { 
+    opacity: 1;
+    cursor: pointer; 
+}
+.package__text {
+    display: none;
+    position: absolute;
+    top: 43%;
+    left: 40%;
+    font-size: 20px;
+    color: #fff;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.package__text span {
+    font-size: 15px;
+}
+.package:hover .package__text {
+    display: block;
+}
+/* 3. Shirt */
+.shirt { 
+    display: block; 
+    position: relative; 
+}
+.shirt::after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0; 
+}
+.shirt::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: url(../images/img-3.png); 
+    opacity: 0; 
+}
+.shirt:hover:before,
+.shirt:hover:after { 
+    opacity: 1;
+    cursor: pointer; 
+}
+.shirt__text {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    font-size: 20px;
+    color: #fff;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.shirt__text span {
+    font-size: 15px;
+}
+.shirt:hover .shirt__text {
+    display: block;
+}
+/* 4. Bottle */
+.bottle { 
+    display: block; 
+    position: relative; 
+}
+.bottle::after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0; 
+}
+.bottle::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: url(../images/img-4.png); 
+    opacity: 0; 
+}
+.bottle:hover::before,
+.bottle:hover::after { 
+    opacity: 1;
+    cursor: pointer; 
+}
+.bottle__text {
+    display: none;
+    position: absolute;
+    top: 45%;
+    left: 44%;
+    font-size: 20px;
+    color: #fff;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.bottle__text span {
+    font-size: 15px;
+}
+.bottle:hover .bottle__text {
+    display: block;
+}
+/* 5. Wine */
+.wine { 
+    display: block; 
+    position: relative; 
+}
+.wine::after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0; 
+}
+.wine::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: url(../images/img-5.png); 
+    opacity: 0; 
+}
+.wine:hover::before,
+.wine:hover::after { 
+    opacity: 1;
+    cursor: pointer; 
+}
+.wine__text {
+    display: none;
+    position: absolute;
+    top: 48%;
+    left: 35%;
+    font-size: 20px;
+    color: #fff;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.wine__text span {
+    font-size: 15px;
+}
+.wine:hover .wine__text {
+    display: block;
+}
+/* 6. Bag */
+.bag { 
+    display: block; 
+    position: relative; 
+}
+.bag::after { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0; 
+}
+.bag::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: url(../images/img-6.png); 
+    opacity: 0; 
+}
+.bag:hover::before,
+.bag:hover::after { 
+    opacity: 1;
+    cursor: pointer; 
+}
+.bag__text {
+    display: none;
+    position: absolute;
+    top: 48%;
+    left: 35%;
+    font-size: 20px;
+    color: #fff;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.bag__text span {
+    font-size: 15px;
+}
+.bag:hover .bag__text {
+    display: block;
+}
+
+/* PRICING PLAN */
 
 .pricing {
     background-color: rgba(0, 0, 0, 0.05);
@@ -302,38 +638,47 @@ button:hover {
 .pricing__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 125px;
 }
 
 .pricing__item {
     background-color: #fff;
+    position: relative;
 }
 .pricing__item:hover {
     box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
     cursor: pointer;
 }
-.pricing__item_title {
-    text-align: center;
+.pricing__item_top{
+   width: 100%;
+}
+.pricing__item-text {
+    position: absolute;
+    top: 7%;
+    left: 28%;
     color: #fff;
     font-size: 25px;
     line-height: 22px;
     letter-spacing: 1.25px;
     font-weight: 400;
-    padding: 48px 90px;
-    background-image: url(../images/pricing-bg.png);
-    height: 209px;
-    width: 370px;
-     /* width: 370px;
-    height: 209px;
-    background-color: #3949ab; */
 }
-.pricing__item-price {
-    text-align: center;
+.pricing__item-text h4 {
+    margin-left: 23px;
+}
+h4.item_title.basic {
+    margin-left: 53px;
+}
+.item-price {
+    /* text-align: center;
     display: flex;
-    align-items: baseline;
+    align-items: baseline; */
     padding-top: 39px;  
     font-weight: 300;
     font-size: 17px;
+}
+.item_title {
+    font-weight: 400;
 }
 .price {
     font-size: 50px;
@@ -360,7 +705,7 @@ button:hover {
     font-size: 17px;
 }
 .pricing__btn button{
-    padding: 23px 25px;
+    padding: 17px 28px;
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
@@ -375,26 +720,28 @@ button:hover {
 .pricing__btn button:hover {
     background-color: #00897b;
     color: #fff;
+    border: none;
 }
 
 /* TEAM */
+.team-member-name {
+    text-align: center;
+    margin-top: 38px;
+    font-size: 20px;
+}
+.team-member-name span {
+    display: block;
+    font-size: 15px;
+    padding-top: 12px;
+}
 
-.team__content {
+.team__slider {
     display: flex;
     justify-content: space-between;
     padding-bottom: 265px;
 }
 
-.team-member_title {
-    font-size: 20px;
-    text-align: center;
-    margin-top: 38px;
-}
-.team-member_text {
-    font-size: 15px;
-    text-align: center;
-    margin-top: 12px;
-}
+
 .team-member_icons .fab,
 .team-member_icons .fas{
     color: #00897b;
@@ -433,10 +780,11 @@ button:hover {
     background-color: #e4fdf9;
 }
 
-
 .blog__box {
     display: flex;
-    
+}
+.blog__box img {
+    width: 49%;
 }
 
 .blog__box-theme {
@@ -446,6 +794,7 @@ button:hover {
 .blog__box_title {
     color: #00897b;
     font-size: 25px;
+    font-weight: 400;
 }
 .blog__box-info {
     display: flex;
@@ -485,11 +834,733 @@ button:hover {
 }
 
 .blog__btn button{
-    padding: 28px 52px;
+    padding: 22px 55px;
     font-size: 20px;
     text-transform: uppercase;
     font-family: Roboto;
     color: #fff;
     background-color: #00897b;
+    
+}
+
+/* CONTACTS */
+
+.contact {
+    color: #fff;
+    background-color: rgb(31, 31, 31);
+    background-image: url(../images/contact-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.contact-img {
+    display: block;
+    padding-bottom: 38px;
+    margin: 0 auto;
+}
+.contact__text {
+    text-align: center;
+    font-size: 20px;
+    line-height: 28px;
     letter-spacing: 1px;
 }
+
+.contact__form {
+    margin-top: 80px;
+    padding-bottom: 200px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-name,
+.contact-mail {
+    width: 43%;
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact-name {
+    margin: 0 25px 0 60px;
+}
+
+.contact-massage {
+    width: 89%;
+    height: 320px;
+    margin: 33px 0 40px 60px;
+    padding: 30px 20px;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    outline: none;
+    border-radius: 10px;
+    resize: none;
+}
+
+.form__btn {
+    position: absolute;
+    display: block;
+    padding: 23px 81px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-radius: 10px;
+    right: 5%;
+    bottom: 8%;
+}
+
+.footer__text {
+    text-align: center;
+    padding: 22px 0;
+    font-family: 'Roboto';
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+
+/* ADAPTIVE */
+@media (max-width: 1190px) {
+    .service__box {
+        flex-grow: 1;
+        margin: 10px;
+    }
+    .works__content {
+        justify-content: center;
+    }
+    .package, .watch, .shirt, .bottle, .wine, .bag {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .pricing__item {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        width: 45%;
+    }
+    .pricing__item-text {
+        font-size: 30px;
+    }
+    .pricing-options li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 920px) {
+    .text {
+        padding-bottom: 100px;
+    }
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+    .header__burger span {
+        position: absolute;
+        background-color: #000;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before,
+    .header__burger::after {
+        content: '';
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .header__burger:before {
+        top: 0;
+    }
+    .header__burger::after {
+        bottom: 0;
+    }
+    .header__burger.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .header__burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+    .menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255);
+        padding: 70px 10px 20px 10px;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu.active {
+        top: 0;
+    }
+    .header__content {
+        height: 70px;
+    }
+    .header__logo {
+        font-size: 20px;
+    }
+    .menu__list {
+        display: block;
+    }
+    .menu__list li {
+        margin: 20px 0 20px 10px;    }
+    body.lock {
+        overflow: hidden;
+    }
+    .buttons button {
+        font-size: 16px;
+    }
+    .works__buttons button {
+        padding: 12px 20px;
+    }
+    .pricing__item-text {
+        font-size: 25px;
+    }
+    .pricing-options li {
+        font-size: 17px;
+    }
+    .pricing__btn button {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+    .pricing__btn {
+        margin-top: 55px;
+    }
+    .left .blog__box-theme {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .blog__box_text {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 20px;
+    }
+    .blog__box-info {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 860px) {
+    .down__btn {
+        display: none;
+    }
+    .top__title {
+        font-size: 50px;
+        padding-top: 165px;
+    }
+    .top__text {
+        font-size: 20px;
+        margin-bottom: 80px;
+    }
+    .title {
+        font-size: 25px;
+        padding-top: 90px;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 19px;
+        max-width: 522px;
+        padding-bottom: 90px;
+    }
+    .about__options {
+        flex-wrap: wrap;
+    }
+    .option1,
+    .option2,
+    .option3 {
+        width: 40%;
+    }
+    .option__titile {
+        font-size: 16px;
+    }
+    .option__text {
+        font-size: 12px;
+        line-height: 18px;
+        padding-bottom: 75px;
+    }
+    .service__text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .service__btn button {
+        border: 1px solid #000000;
+        font-size: 16px;
+    }
+    .watch img,
+    .package img,
+    .shirt img,
+    .bottle img,
+    .wine img,
+    .bag img {
+        width: 300px;
+    }
+    .watch::before,
+    .package::before,
+    .shirt::before,
+    .bottle::before,
+    .wine::before,
+    .bag::before {
+        background-size: cover;
+    }
+    .watch:hover:before, .watch:hover:after,
+    .shirt:hover:before, .shirt:hover:after,
+    .bottle:hover::before, .bottle:hover::after {
+        width: 300px;
+        height: 300px;
+    }
+    .watch__text,
+    .package__text,
+    .shirt__text,
+    .bottle__text,
+    .wine__text,
+    .bag__text  {
+        top: 38%;
+        left: 31%;
+    }
+    .works__btn {
+        margin-top: 90px;
+        padding-bottom: 100px;
+    }
+    .works__btn button {
+        padding: 18px 38px;
+        font-size: 16px;
+    }
+    .price {
+        font-size: 45px;
+    }
+    .dollar {
+        font-size: 22px;
+    }
+    .pricing__content {
+        justify-content: center;
+    }
+    .pricing__item {
+        width: 75%;
+    }
+    .pricing__item_top {
+        height: 225px;
+    }
+    .pricing__content {
+        height: 30%;
+    }
+    .pricing__item-text {
+        font-size: 30px;
+        left: 37%;
+        top: 12%;
+    }
+    .pricing-options {
+        margin: 0;
+    }
+    .pricing-options li {
+        padding: 27px 37px 14px;
+        margin: 0 100px;
+        font-size: 15px;
+    }
+    .pricing__content {
+        padding-bottom: 100px;
+    }
+    .blog__box-theme {
+        padding-top: 40px;
+    }
+
+    .contact-info {
+        display: contents;
+    }
+    .contact__form {
+        margin-top: 60px;
+        padding-bottom: 110px;
+    }
+    .contact__address,
+    .contact__phone,
+    .contact__mail {
+        display: flex;
+        justify-content: center;
+    }
+    .contact__address img,
+    .contact__phone img,
+    .contact__mail img  {
+        width: 5%;
+        margin-right: 22px;
+    }
+    .contact__phone img {
+        margin-left: -56px;
+    }
+    .contact-img {
+        margin: 0;
+    }
+    .contact__mail img {
+        margin-left: 12px;
+    }
+    .contact__text {
+        text-align: left;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .form__btn button {
+        margin-bottom: 100px;
+    }
+    .contact-name {
+        margin: 0 25px 0 45px;
+    }
+    .contact-massage {
+        margin: 33px 0 40px 45px;
+    }
+}
+
+@media (max-width: 740px) {
+    .top__title {
+        font-size: 28px;
+        padding-top: 100px;
+        margin-bottom: 28px;
+    }
+    .top__text {
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+    .top__buttons {
+        padding: 0 0 80px ;
+    }
+    .top__buttons button {
+        padding: 14px 18px;
+        font-size: 12px;
+        font-weight: 400;
+        border: 1px solid #f8f8f8;
+    }
+    .works__buttons {
+        margin-bottom: 80px;
+    }
+    .works__buttons button {
+        padding: 10px 18px;
+    }
+    .buttons button {
+        font-size: 14px;
+    }  
+    .watch img,
+    .package img,
+    .shirt img,
+    .bottle img,
+    .wine img,
+    .bag img {
+        width: 200px;
+    }
+    .watch:hover:before, .watch:hover:after,
+    .shirt:hover:before, .shirt:hover:after,
+    .bottle:hover::before, .bottle:hover::after {
+        width: 200px;
+        height: 200px;
+    }
+    .watch__text,
+    .wine__text,
+    .bag__text  {
+        left: 20%;
+    }
+    .works__btn button {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+    .works__btn {
+        margin-top: 80px;
+        padding-bottom: 80px;
+    }
+    .pricing__item-text {
+        font-size:25px;
+        left: 34%;
+        top: 10%;
+    }
+    .pricing__btn button {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    .blog__box_title {
+        font-size: 22px;
+    }
+    .blog__box-info {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    .blog__box_text {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+    .date {
+        margin-right: 30px;
+    }
+    .blog__box {
+        margin-bottom: 12px;
+    }
+    .contact-name, .contact-mail {
+        width: 89%;
+    }
+    .contact-mail {
+        margin: 27px 0 0 46px;
+    }
+    .contact-name {
+        margin: 0 0 0 45px;
+    }
+}
+
+
+@media (max-width: 570px) {
+    .works__buttons button {
+        padding: 10px 12px;
+    }
+    .buttons button {
+        font-size: 12px;
+    }
+    .text {
+        padding-bottom: 70px;
+    }
+    .pricing__item-text {
+        font-size: 23px;
+        top: 7%;
+    }
+    .pricing__item-text {
+        left: 32%;
+    }
+    .pricing__item_top {
+        height: 180px;
+    }
+    .pricing-options li {
+        font-size: 13px;
+        margin: 0 60px;
+    }
+    .blog__box img {
+        display: none;
+    }
+    .blog__box_text {
+        max-width: 100%;
+    }
+    .blog__btn {
+        padding: 60px 0;
+    }
+    .blog__btn button {
+        padding: 20px 30px;
+        font-size: 16px;
+    }
+    .blog__box-theme {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .form__btn {
+        right: 3%;
+        padding: 18px 58px;
+    }
+    .contact-name,
+    .contact-mail,
+    .contact-massage {
+        margin-left: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .text {
+        font-size: 12px;
+        padding-bottom: 60px;
+    }
+    .title {
+        font-size: 23px;
+        margin-bottom: 26px;
+        padding-top: 60px;
+    }
+    .about__options {
+        justify-content: center;
+    }
+    .option1,
+    .option2,
+    .option3 {
+        width: 100%;
+    }
+    .service__text {
+        font-size: 12px;
+    }
+    .service__btn button {
+        font-size: 14px;
+    }
+    .service__btn button {
+        padding: 12px 10px;
+    }
+    .works__buttons {
+        justify-content: start;
+        flex-wrap: wrap;
+        margin-left: 33px;
+        margin-bottom: 70px;
+    }
+    .buttons button {
+        margin-bottom: 10px;
+        margin-right: 8px;
+    }
+    .package, .watch, .shirt, .bottle, .wine, .bag {
+        margin-bottom: 15px;
+    }
+    .watch img, .package img, .shirt img, .bottle img, .wine img, .bag img {
+        width: 290px;
+    }
+    .watch:hover:before, .watch:hover:after, .shirt:hover:before, .shirt:hover:after, .bottle:hover::before, .bottle:hover::after {
+        width: 290px;
+        height: 290px;
+    }
+    .price {
+        font-size: 35px;
+    }
+    .dollar {
+        font-size: 20px;
+    }
+    .item-price {
+        font-size: 15px;
+    }
+    .blog__box-theme {
+        padding-top: 15px;
+    }
+    .contact__text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .contact__address img, .contact__phone img, .contact__mail img {
+        display: none;
+    }
+    .contact__address, .contact__phone, .contact__mail {
+        justify-content: start;
+        margin-bottom: 15px;
+        margin-left: 30px;
+    }
+}
+@media (max-width: 440px) {
+    .text {
+        padding-bottom: 65px;
+    }
+    .top__title {
+        font-size: 18px;
+        padding-top: 70px;
+        margin-bottom: 26px;
+    }
+    .top__text {
+        font-size: 7px;
+        margin-bottom: 45px;
+    }
+    .top__buttons button {
+        padding: 12px 15px;
+        font-size: 9px;
+    }
+    .top__buttons {
+        padding: 0 0 70px ;
+    }
+    .service__title {
+        margin-top: 40px;
+    }
+    .service__text {
+        font-size: 12px;
+    }
+    .service__icon {
+        display: none;
+    }
+    .service__btn button {
+        font-size: 12px;
+        padding: 12px 10px;
+    }
+    .pricing__item_top {
+        height: 150px;
+    }
+    .pricing__item {
+        width: 85%;
+    }
+    .pricing__item-text {
+        left: 28%;
+        font-size: 18px;
+    }
+    .item-price {
+        padding-top: 25px;
+    }
+    .price {
+        font-size: 30px;
+    }
+    .pricing__btn {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pricing__btn button {
+        font-size: 12px;
+    }
+    .pricing-options li {
+        margin: 0 45px;
+    }
+    .pricing-options li {
+        padding: 27px 0 14px;
+    }
+    .blog__btn button {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+    .blog__btn {
+        padding: 50px 0;
+    }
+    .contact-name,
+    .contact-mail,
+    .contact-massage {
+        margin-left: 20px;
+    }
+    .form__btn {
+        right: 6%;
+        padding: 16px 49px;
+        font-size: 16px;
+    }
+    .contact-name, .contact-mail, .contact-massage {
+        font-size: 18px;
+        padding: 25px 20px;
+    }
+    .contact-massage {
+        height: 200px;
+    }
+}
+
+@media (max-width: 350px) {
+    .pricing__item-text {
+        left: 20%;
+    }
+    .contact-name, .contact-mail, .contact-massage {
+        padding: 20px 20px;
+    }
+    .contact__form {
+        padding-bottom: 100px;
+    }
+    .form__btn {
+        padding: 14px 40px;
+        font-size: 14px;
+    }
+    .footer__text {
+        font-size: 16px;
+    }
+}
+
+
+
+/* 
+@media (min-width: 1024px) {
+    .menu__list {
+        display: flex !important;
+    }
+} */
