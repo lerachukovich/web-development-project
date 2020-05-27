@@ -49,7 +49,7 @@ button:hover {
 /* Menu*/
 
 .header {
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -70,7 +70,7 @@ button:hover {
 
 .header__content {
     position: relative;
-    /* z-index: 2; */
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -184,6 +184,8 @@ img.option__icon {
     display: block;
     margin: 0 auto;
     padding-bottom: 40px;
+    width: 70px;
+    height: 100px;
 }
 
 .option__titile {
@@ -224,9 +226,11 @@ img.option__icon {
 }
 
 .service__icon{
-    background-image: url(../images/service-icon.png);
+    /* background-image: url(../images/service-icon.png); */
+    background-image: url(../images/phone.svg);
+    background-repeat: no-repeat;
     display: block;
-    width: 56px;
+    width: 62px;
     height: 62px;
     margin-bottom: 38px;
     display: block;
@@ -260,7 +264,8 @@ img.option__icon {
     padding-bottom: 49px;
 }
 
-.service__box:hover {
+.service__box:hover,
+.service__box:active {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
     background-color: #00897b;
     color: #fff;
@@ -272,7 +277,8 @@ img.option__icon {
 }
 
 .service__box:hover .service__icon {
-    background-image: url(../images/service-wicon.png);
+    /* background-image: url(../images/service-wicon.png); */
+    background-image: url(../images/wphone.svg);
 }
 
 /* WORKS */
@@ -295,7 +301,8 @@ img.option__icon {
     letter-spacing: 1px;
 }
 
-.works__buttons button:hover {
+.works__buttons button:hover,
+.works__buttons button:active {
     background-color: #00897b;
     color: #fff;
 }
@@ -306,19 +313,14 @@ img.option__icon {
     justify-content: space-between;
     
 }
-.package,
-.watch,
-.shirt {
-    margin-bottom: 16px;
-}
+
 .package,
 .watch,
 .shirt,
 .bottle,
 .wine,
 .bag {
-    margin-right: 7px;
-    margin-left: 7px;
+    margin: 0 7px 16px 7px;
 }
 
 .works__btn {
@@ -363,7 +365,9 @@ img.option__icon {
     opacity: 0; 
 }
 .watch:hover:before,
-.watch:hover:after { 
+.watch:hover:after,
+.watch:active:before,
+.watch:active:after { 
     opacity: 1;
     cursor: pointer; 
 }
@@ -411,7 +415,9 @@ img.option__icon {
     opacity: 0; 
 }
 .package:hover:before,
-.package:hover:after { 
+.package:hover:after,
+.package:active:before,
+.package:active:after { 
     opacity: 1;
     cursor: pointer; 
 }
@@ -459,7 +465,9 @@ img.option__icon {
     opacity: 0; 
 }
 .shirt:hover:before,
-.shirt:hover:after { 
+.shirt:hover:after,
+.shirt:active:before,
+.shirt:active:after { 
     opacity: 1;
     cursor: pointer; 
 }
@@ -507,7 +515,9 @@ img.option__icon {
     opacity: 0; 
 }
 .bottle:hover::before,
-.bottle:hover::after { 
+.bottle:hover::after,
+.bottle:active::before,
+.bottle:active::after { 
     opacity: 1;
     cursor: pointer; 
 }
@@ -555,7 +565,9 @@ img.option__icon {
     opacity: 0; 
 }
 .wine:hover::before,
-.wine:hover::after { 
+.wine:hover::after,
+.wine:active::before,
+.wine:active::after { 
     opacity: 1;
     cursor: pointer; 
 }
@@ -603,7 +615,9 @@ img.option__icon {
     opacity: 0; 
 }
 .bag:hover::before,
-.bag:hover::after { 
+.bag:hover::after,
+.bag:active::before,
+.bag:active::after { 
     opacity: 1;
     cursor: pointer; 
 }
@@ -646,7 +660,8 @@ img.option__icon {
     background-color: #fff;
     position: relative;
 }
-.pricing__item:hover {
+.pricing__item:hover,
+.pricing__item:active {
     box-shadow: 0 3px 25px rgba(0, 0, 0, 0.35);
     cursor: pointer;
 }
@@ -795,7 +810,9 @@ h4.item_title.basic {
     border-radius: 10px;
 }
 .hidden_icons .fab:hover,
-.hidden_icons .fas:hover{
+.hidden_icons .fas:hover,
+.hidden_icons .fab:active,
+.hidden_icons .fas:active{
     color: #ffffff;
     background-color: #3949ab;
     cursor: pointer;
@@ -1086,7 +1103,7 @@ h4.item_title.basic {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.8);
         padding: 70px 10px 20px 10px;
         transition: all 0.3s ease 0s;
         overflow: auto;
